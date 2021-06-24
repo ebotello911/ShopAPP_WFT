@@ -1,13 +1,15 @@
 import Cart from "./Components/Cart";
 import Nav from "./Components/Nav";
 import HomeScreen from "./screens/HomeScreen";
+// import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
+    <div>
+      {/* <Enter /> */}
       <Nav />
-      <Cart />
       <HomeScreen />
+      <Cart />
     </div>
   );
 }

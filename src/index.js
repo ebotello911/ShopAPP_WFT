@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import CartState from "./context/cart/CartState";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <CartState>
-      <App />
-    </CartState>
+    <BrowserRouter>
+      <Switch>
+        <CartState>
+          <App />
+        </CartState>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
