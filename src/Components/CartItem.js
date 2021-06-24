@@ -9,11 +9,11 @@ const CartItem = ({ item }) => {
   let opts = { format: "%s%v", symbol: "$" };
   return (
     <li className='CartItem__item'>
-      <img src={products.image} alt='' />
+      <img src={item.image} alt='' />
       <div>
-        {products.title} {formatCurrency(`${products.price}`, opts)}
+        {item.title} {formatCurrency(`${item.price}`, opts)}
       </div>
-      <button className='CartItem__button' onClick={() => removeItem(products.id)}>
+      <button className='CartItem__button' onClick={() => removeItem(item.id)}>
         Remove
       </button>
     </li>

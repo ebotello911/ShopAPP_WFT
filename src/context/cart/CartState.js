@@ -3,6 +3,7 @@ import CartContext from "./CartContext";
 import CartReducer from "./CartReducer";
 import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from "../Types";
 
+
 const CartState = ({ children }) => {
   const initialState = {
     showCart: false,
@@ -24,6 +25,7 @@ const CartState = ({ children }) => {
   };
 
   return (
+    // The Provider component is going to be used to wrap the components that are going to have access to our context.
     <CartContext.Provider
       value={{
         showCart: state.showCart,

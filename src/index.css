@@ -5,13 +5,23 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  
 }
+
+  body, html{ 
+    z-index: -1;
+    background: url(/src/patrick-mcmanaman-LN_g3qA8ohg-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 h1,
 p {
   font-family: Lato;
 }
-
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -42,6 +52,7 @@ p {
 ::-webkit-scrollbar-track:active {
   background: #333333;
 }
+/* Applies to all scrollbar pieces and indicates whether or not a scrollbar corner is present. */
 ::-webkit-scrollbar-corner {
   background: transparent;
 }

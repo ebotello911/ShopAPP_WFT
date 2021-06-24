@@ -1,28 +1,34 @@
 import "./Nav.css";
 import { useContext } from "react";
 import CartContext from "../context/cart/CartContext";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Nav = () => {
   const { cartItems, showHideCart } = useContext(CartContext);
 
   return (
     <nav>
-      <div className='nav__left'>Super Store</div>
-      <div className='nav__middle'>
-        <div className='input__wrapper'>
-          <input type='text' />
-          <i className='fas fa-search' />
+      {/* Title */}
+      <div className="nav__left">Super Store </div>
+      <div className="nav__middle">
+        {/* Search */}
+        <div className="input__wrapper">
+          <input type="text" />
+          <i className="fas fa-search" />
         </div>
       </div>
-      <div className='nav__right'>
-        <div className='cart__icon'>
+      {/* Cart Icon */}
+      <div className="nav__right">
+        <div className="cart__icon">
           <i
-            className='fa fa-shopping-cart'
-            aria-hidden='true'
+            className="fas fa-shopping-cart"
+            aria-hidden="true"
             onClick={showHideCart}
           />
+          {/* Item count */}
           {cartItems.length > 0 && (
-            <div className='item__count'>
+            <div className="item__count">
               <span>{cartItems.length}</span>
             </div>
           )}

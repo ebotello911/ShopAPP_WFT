@@ -4,6 +4,8 @@ import CartContext from "../context/cart/CartContext";
 import formatCurrency from "format-currency";
 import CartItem from "./CartItem";
 
+
+//Cart function using state objects and currency 
 const Cart = () => {
   const { showCart, cartItems, showHideCart } = useContext(CartContext);
   let opts = { format: "%s%v", symbol: "$" };
